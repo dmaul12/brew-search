@@ -13,4 +13,4 @@ Welcome to Brew Search. The app that lets you search for breweries by name, esta
 ![alt text](images/home.png "Home Page")
 
 ERD:
-![alt text](images/erd.png "ERD")
+![alt text](images/ERD.png "ERD")
