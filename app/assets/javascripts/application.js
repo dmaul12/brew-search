@@ -15,71 +15,71 @@
 //= require_tree .
 
 // show brewery name info
-function renderBrew( brew ) {
-  var $container = $('#breweries');
-  var $brewery    = $('<li class="brew">');
-  var $name      = $('<a target="_blank" href="' + brew.website + '">')
-  $name.text( brew.name );
+// function renderBrew( brew ) {
+//   var $container = $('#breweries');
+//   var $brewery    = $('<li class="brew">');
+//   var $name      = $('<a target="_blank" href="' + brew.website + '">')
+//   $name.text( brew.name );
 
-  var $des       = $('<li>').text(brew.description)
-  var $img       = $('<img>').attr('src', brew.images.large)
-  var $save      =$('<button class="save">').text("Save Brewery")
+//   var $des       = $('<li>').text(brew.description)
+//   var $img       = $('<img>').attr('src', brew.images.large)
+//   var $save      =$('<button class="save">').text("Save Brewery")
 
-  $brewery.append( $name );
-  $brewery.append($img);
-  $brewery.append($des);
-  $brewery.append($save);
-  $container.append( $brewery );
-}
+//   $brewery.append( $name );
+//   $brewery.append($img);
+//   $brewery.append($des);
+//   $brewery.append($save);
+//   $container.append( $brewery );
+// }
 
-// get breweries by name and established date
-function getBrews(event) {
-  event.preventDefault()
-  var $name    = $('#name').val()
-  var $date    = $('#date').val()
-  // console.log($name)
-  $.getJSON('/brews', {name:$name, established:$date}).done(function( brews ) {
+// // get breweries by name and established date
+// function getBrews(event) {
+//   event.preventDefault()
+//   var $name    = $('#name').val()
+//   var $date    = $('#date').val()
+//   // console.log($name)
+//   $.getJSON('/brews', {name:$name, established:$date}).done(function( brews ) {
 
-    console.log(brews)
-    console.log($date)
-    brews.data.forEach(function( brew ) {
-      renderBrew( brew );
-    })
-    saveBrews();
-  })
-}
+//     console.log(brews)
+//     console.log($date)
+//     brews.data.forEach(function( brew ) {
+//       renderBrew( brew );
+//     })
+//     saveBrews();
+//   })
+// }
 
-$(function() {
-  var $form     = $('form')
-  $form.submit(getBrews);
+// $(function() {
+//   var $form     = $('form')
+//   $form.submit(getBrews);
 
-})
+// })
 
-function saveBrews(e){
-  $('.save').on('click',function(e){
+// function saveBrews(e){
+//   $('.save').on('click',function(e){
 
-    console.log('here')
-    let $siblings = $(event.target).parent().children();
-    console.log($siblings)
-    let data ={
-      name: $siblings.eq(0)[0].innerText
+//     console.log('here')
+//     let $siblings = $(event.target).parent().children();
+//     console.log($siblings)
+//     let data ={
+//       name: $siblings.eq(0)[0].innerText
 
-    }
-    console.log(data)
-    console.log(e)
-    $.ajax({
-      url: '/brews',
-      method: 'post',
-      data: data
-    })
-  })
-}
+//     }
+//     console.log(data)
+//     console.log(e)
+//     $.ajax({
+//       url: '/brews',
+//       method: 'post',
+//       data: data
+//     })
+//   })
+// }
 
-function showSaveBrews(e){
-  var $name    = $('#name').val()
-  $.get('/brews',{name:$name}).done(function(brews){
-    brews.results.forEach(function(brew){
-      renderBrew(brew)
-    })
-  })
-}
+// function showSaveBrews(e){
+//   var $name    = $('#name').val()
+//   $.get('/brews',{name:$name}).done(function(brews){
+//     brews.results.forEach(function(brew){
+//       renderBrew(brew)
+//     })
+//   })
+// }

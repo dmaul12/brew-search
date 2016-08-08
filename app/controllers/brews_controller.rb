@@ -1,4 +1,5 @@
 class BrewsController < ApplicationController
+    before_action :require_user, only: [:index, :show]
   # def index
   #   @brews = Brew.all
   #   render :json => @brew
