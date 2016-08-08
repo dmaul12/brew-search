@@ -36,37 +36,22 @@ function renderBrew( brew ) {
 function getBrews(event) {
   event.preventDefault()
   var $name    = $('#name').val()
-  // var $date    = $('#date').val()
+  var $date    = $('#date').val()
   // console.log($name)
-  // $.getJSON('/brews', {name:$name, established:$date}).done(function( brews ) {
-  $.getJSON('/brews', {name:$name}).done(function( brews ) {
-    // console.log(brews)
+  $.getJSON('/brews', {name:$name, established:$date}).done(function( brews ) {
+
+    console.log(brews)
+    console.log($date)
     brews.data.forEach(function( brew ) {
       renderBrew( brew );
     })
     saveBrews();
   })
 }
-// Tried to get established dates but can only do name or established
-// function getEstablished(e) {
-//   event.preventDefault()
-//   // var $name    = $('#name').val()
-//   var $date    = $('#date').val()
-
-//   $.getJSON('/brews', {date:$date}).done(function( brews ) {
-//     console.log(brews)
-//     brews.data.forEach(function( brew ) {
-//       renderBrew( brew );
-//     })
-//     saveBrews();
-//   })
-// }
 
 $(function() {
   var $form     = $('form')
   $form.submit(getBrews);
-
-
 
 })
 
@@ -75,11 +60,13 @@ function saveBrews(e){
 
     console.log('here')
     let $siblings = $(event.target).parent().children();
-
+    console.log($siblings)
     let data ={
       name: $siblings.eq(0)[0].innerText
+
     }
     console.log(data)
+    console.log(e)
     $.ajax({
       url: '/brews',
       method: 'post',
