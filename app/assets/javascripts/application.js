@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+// show brewery name info
 function renderBrew( brew ) {
   var $container = $('#breweries');
   var $brewery    = $('<li class="brew">');
@@ -30,19 +32,35 @@ function renderBrew( brew ) {
   $container.append( $brewery );
 }
 
-// the saveRecipes have to be called right after get
+// get breweries by name and established date
 function getBrews(event) {
   event.preventDefault()
   var $name    = $('#name').val()
-  console.log($name)
-  $.getJSON('/brews',{name:$name}).done(function( brews ) {
-    console.log(brews)
+  // var $date    = $('#date').val()
+  // console.log($name)
+  // $.getJSON('/brews', {name:$name, established:$date}).done(function( brews ) {
+  $.getJSON('/brews', {name:$name}).done(function( brews ) {
+    // console.log(brews)
     brews.data.forEach(function( brew ) {
       renderBrew( brew );
     })
     saveBrews();
   })
 }
+// Tried to get established dates but can only do name or established
+// function getEstablished(e) {
+//   event.preventDefault()
+//   // var $name    = $('#name').val()
+//   var $date    = $('#date').val()
+
+//   $.getJSON('/brews', {date:$date}).done(function( brews ) {
+//     console.log(brews)
+//     brews.data.forEach(function( brew ) {
+//       renderBrew( brew );
+//     })
+//     saveBrews();
+//   })
+// }
 
 $(function() {
   var $form     = $('form')
@@ -51,31 +69,30 @@ $(function() {
 
 
 })
-// Mike W & Cyrus helped
-// function saveBrews(e){
-//   $('.save').on('click',function(e){
 
-//     console.log('here')
-//     let $siblings = $(event.target).parent().children();
-//     console.log($siblings.eq(0))
-//     console.log($siblings.eq(0)[0].innerHTML)
-//     let data ={
-//       title: $siblings.eq(0)[0].innerText
-//     }
-//     console.log(data)
-//     $.ajax({
-//       url: '/recipes',
-//       method: 'post',
-//       data: data
-//     })
-//   })
-// }
+function saveBrews(e){
+  $('.save').on('click',function(e){
 
-// function showSaveBrews(e){
-//   var $items    = $('#items').val()
-//   $.get('/recipes',{title:$title}).done(function(recipes){
-//     recipes.results.forEach(function(recipe){
-//       renderRecipe(recipe)
-//     })
-//   })
-// }
+    console.log('here')
+    let $siblings = $(event.target).parent().children();
+
+    let data ={
+      name: $siblings.eq(0)[0].innerText
+    }
+    console.log(data)
+    $.ajax({
+      url: '/brews',
+      method: 'post',
+      data: data
+    })
+  })
+}
+
+function showSaveBrews(e){
+  var $name    = $('#name').val()
+  $.get('/brews',{name:$name}).done(function(brews){
+    brews.results.forEach(function(brew){
+      renderBrew(brew)
+    })
+  })
+}
