@@ -1,0 +1,2 @@
+module SavebrewHelper
+end

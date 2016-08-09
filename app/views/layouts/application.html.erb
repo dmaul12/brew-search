@@ -12,5 +12,13 @@
     <%= yield %>
 <%# add current user and email %>
 
+  <div id="welcome_container">
+    <% if current_user %>
+      <p class="welcome">Welcome <%= current_user.first_name.titleize%> </p>
+      <%= link_to "Logout", {:controller=> "sessions", :action=> "destroy"}, :method => :delete, :id => "logout" %>
+    <%else%>
+      <p class="welcome">Welcome Guest</p>
+    <% end %>
+  </div>
   </body>
 </html>

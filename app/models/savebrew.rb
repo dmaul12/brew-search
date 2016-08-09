@@ -1,0 +1,2 @@
+class Savebrew < ApplicationRecord
+end

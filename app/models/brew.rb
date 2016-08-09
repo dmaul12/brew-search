@@ -1,3 +1,3 @@
 class Brew < ApplicationRecord
-  has_many :name
+  # has_many :names
 end
