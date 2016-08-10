@@ -54,10 +54,11 @@ function getBrews(event) {
 }
 
 $(function() {
-  var $form     = $('form')
+  var $form     = $('.beer')
   $form.submit(getBrews);
 
 })
+
 
 function saveBrews(e){
   $('.save').on('click',function(e){
@@ -83,24 +84,41 @@ function saveBrews(e){
 function showSaveBrews(){
 
 var $container = $('#container')
+
    $.ajax({
       url: '/savebrew',
       method: 'get'
     }).done(function(brewlist){
       console.log(brewlist)
       brewlist.forEach(function(brew){
-        var $div=$('<div>')
-        var $pi= $('<p>')
+        console.log(brew.id)
+        var $delete     =$('<button class="delete">').text("Delete Brewery")
+        var $oneresult=$('<div>')
+        var $pi= $('<p>').text(brew.name +' '+brew.website).val(brew.id)
         console.log(brew.name, brew.website)
-        $div.text(brew.name)
-        $pi.text(brew.website)
-        $('body').append($div,$pi)
-        // $('body').append($pi)
+        $oneresult.append($pi).append($delete)
+        // $pi.text(brew.website)
+        $('body').append($oneresult)
+        $delete.click(deleteBrews)
       })
     })
 
 }
 
 showSaveBrews()
+
+function deleteBrews(){
+  var $div= $(this).parent()
+  var id = $(this).siblings().eq(0).val()
+// var id
+  $.ajax({
+    url: '/savebrew/' + id,
+    method: 'delete'
+  }).done(function(){
+    // $(this).parent().empty();
+    $div.empty()
+
+  })
+}
 
 
