@@ -1,24 +1,28 @@
-<h1>Brewery Finder</h1>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Brewery Finder</h1>
+    <p>Welcome to Brewery Finder! The place where you can find all the breweries based on name and established date.</p>
+  </div>
+</div>
 <body>
 <header>
   <div class="forrest-img">
     <img src="http://pdxpedicab.com/home/wp-content/uploads/2013/09/Brewery.jpg" alt="image" />
   </div>
-  <div class="about-page">
 
-      <p>Welcome to Brewery Finder! The place where you can find all the breweries based on name and established date.</p>
-
-  </div>
 </header>
 
 <div id='enter-info'>Enter brewery name</div>
 <div id="stock">
-
+<section class="searchform jumbotron">
+<h2>Search Brewery By Name or Established Year</h2>
 <form class ="beer">
-  <input id="name" name="name" type="text" placeholder="Brewery Name">
-  <input id="date" name="established" type="text" placeholder="Established Date">
-  <input type="submit">
+  <input id="name"  name="name" type="text" placeholder="Brewery Name">
+  <input id="date"  name="established" type="text" placeholder="Established Year">
+  <input type="submit" class="btn btn-primary btn-lg">
 </form>
+</section>
 
 </div>
 <div id="container"></div>
@@ -28,8 +32,9 @@
 
 
   <div id="breweries">
-    <!--  brew will be rendered -->
+
   </div>
 
 </div>
+
 </body>

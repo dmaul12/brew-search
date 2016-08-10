@@ -1,3 +1,61 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#enter-info {
+    margin-bottom: 50px;
+    border-radius: 0;
+    color:green;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+body{
+  padding-left: 70px;
+  padding-right: 70px;
+
+ }
+
+    /*SearchForm Styles*/
+
+
+.searchform.jumbotron{
+  background-color: #f2f2f2;
+  margin-top: 15px;
+  padding-top: 05px;
+  border-radius: 1px;
+}
+
+.searchform.jumbotron h2{
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+.btn.btn-primary.btn-lg{
+  background-color: #b3b3b3;
+  color: green;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+}
+input.form-control.input-lg{
+  border-radius: 1px;
+}
+
+#name {
+  width: 40%;
+}
+
+#date {
+  width: 40%;
+}
+
+
