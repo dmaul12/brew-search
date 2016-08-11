@@ -2,14 +2,60 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#enter-info {
-    margin-bottom: 50px;
-    border-radius: 0;
-    color:green;
+/*StayHere PlayHere Save Trip Styling*/
+.brew{
+  overflow: none;
+  margin-top: 40px;
+
+
+  margin: auto;
 }
 
-.jumbotron {
-  margin-bottom: 0;
+#center {
+    display: inline-block;
+    // margin-left: -180px;
+    // width: 200px;
+    // height: 200PX;
+ }
+.save{
+  background-color: black;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 1px;
+}
+
+.list-group h2, .savetrips h2{
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card h4.card-title{
+  font-weight: bold;
+}
+
+.savetrips h3{
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.bolden {
+  font-weight: 700;
+}
+
+
+
+
+
+
+.signup{
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
 }
 
 body{
@@ -17,6 +63,49 @@ body{
   padding-right: 70px;
 
  }
+
+
+/*NavBar and Intro Area*/
+#head{
+  background: linear-gradient(
+      rgba(55, 128, 8, 0.65),
+      rgba(67, 28, 93, 0.65)), url('http://pdxpedicab.com/home/wp-content/uploads/2013/09/Brewery.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 450px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:450px;
+  margin-top: -20px;
+  text-align: center;
+  color: white;
+}
+
+ #cap{
+  font-family: 'Oswald', sans-serif;
+  font-size: 90px;
+  text-align:center;
+}
+
+// .navbar{
+//   background-color: #431c5d;
+//   border-color: #cdd422;
+// }
+
+// .navbar-default .navbar-brand{
+//   color: #cdd422;
+//   font-size: 24px;
+//   font-family: 'Playfair Display', serif;
+//   font-style: italic;
+// }
+
+// .navbar-nav.navbar-right{
+//   margin: 15px 5px;
+//   color: white;
+// }
 
     /*SearchForm Styles*/
 

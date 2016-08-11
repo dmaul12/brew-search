@@ -3,7 +3,7 @@
 function renderBrew( brew ) {
   // var $id        = $('<li>').text(brew.id)
   var $container  = $('#breweries');
-  var $brewery    = $('<div class="brew">');
+  var $brewery    = $('<div class="brew">').addClass('text-center');
   var $save       = $('<button class="save">').text("Save Brewery")
 // name of brewery will be a link to website
   var $name       = $('<a target="_blank" href="' + brew.website + '">')
@@ -13,7 +13,7 @@ function renderBrew( brew ) {
 
 // if image is found than get the large image of the brewery and append the image
     if (brew.images){
-    var $img       = $('<img>').attr('src', brew.images.large)
+    var $img       = $('<img id="center">').attr('src', brew.images.large)
       }
 
     $brewery.append( $name, $img, $descript, $save );
@@ -53,13 +53,15 @@ function saveBrews(e){
     console.log($siblings)
     let data ={
       name: $siblings.eq(0)[0].innerText,
-      website: $siblings.eq(0)[0].host
+      website: $siblings.eq(0)[0].href,
+      img: $siblings.eq(1)[0].currentSrc
       }
     console.log(data)
     $.ajax({
       url: '/savebrew',
       method: 'post',
-      data: data
+      data: data,
+      success: showSaveBrews
     })
   })
 }
@@ -74,11 +76,12 @@ function showSaveBrews(){
       console.log(brewlist)
       brewlist.forEach(function(brew){
         console.log(brew.id)
+        var $img       = $('<img>').attr('src', brew.img)
         var $delete     =$('<button class="delete">').text("Delete Brewery")
         var $oneresult=$('<div>')
         var $pi= $('<p>').text(brew.name +' '+brew.website).val(brew.id)
         console.log(brew.name, brew.website)
-        $oneresult.append($pi).append($delete)
+        $oneresult.append($pi).append($delete).append($img)
 
         $('body').append($oneresult)
         $delete.click(deleteBrews)
