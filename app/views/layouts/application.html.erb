@@ -12,13 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-
-  <body>
-    <%= yield %>
-<%# add current user and email %>
-
-  <div id="welcome_container">
+ <div id="welcome_container">
     <% if current_user %>
       <p class="welcome">Welcome <%= current_user.first_name.titleize%> </p>
       <%= link_to "Logout", {:controller=> "sessions", :action=> "destroy"}, :method => :delete, :id => "logout" %>
@@ -26,5 +20,13 @@
       <p class="welcome">Welcome Guest</p>
     <% end %>
   </div>
+
+  </head>
+
+  <body>
+    <%= yield %>
+<%# add current user and email %>
+
+
   </body>
 </html>

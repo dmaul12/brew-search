@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20160809190438) do
   enable_extension "plpgsql"
 
   create_table "brews", force: :cascade do |t|
+    t.string "brew_id"
     t.string "name"
     t.string "website"
-    t.string "img"
   end
 
   create_table "savebrews", force: :cascade do |t|

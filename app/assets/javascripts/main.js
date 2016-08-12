@@ -13,7 +13,7 @@ function renderBrew( brew ) {
 
 // if image is found than get the large image of the brewery and append the image
     if (brew.images){
-    var $img       = $('<img id="center">').attr('src', brew.images.large)
+    var $img       = $('<img id="img">').attr('src', brew.images.large)
       }
 
     $brewery.append( $name, $img, $descript, $save );
@@ -71,7 +71,7 @@ function saveBrews(e){
 }
 
 function showSaveBrews(){
-  var $container = $('#container')
+  var $container = $('#savedbrew')
 
    $.ajax({
       url: '/savebrew',
@@ -83,13 +83,13 @@ function showSaveBrews(){
         // var $a      = $('a').attr('href', brew.website)
         var $img       = $('<img>').attr('src', brew.img)
         var $delete     =$('<button class="delete">').text("Delete Brewery")
-        var $oneresult=$('<div>')
+        var $oneresult=$('<div class = "one">')
         var $div= $('<div>').text(brew.name +' '+brew.website).val(brew.id)
         console.log(brew.name, brew.website)
         // console.log($a)
         $oneresult.append($div).append($delete).append($img)
-
-        $('body').append($oneresult)
+        $container.append($oneresult)
+        // $('body').append($oneresult)
         $delete.click(deleteBrews)
       })
   })
