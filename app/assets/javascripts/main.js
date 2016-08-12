@@ -46,15 +46,19 @@ function getBrews(event) {
 function saveBrews(e){
   $('.save').on('click',function(e){
 
+
 // the name, website, description is in the parent and are children of each other
 // using jquery the .eq accesses the name = innerText and website = host. See console.log
 // ajax call to post the saved data
     let $siblings = $(event.target).parent().children();
     console.log($siblings)
     let data ={
+
       name: $siblings.eq(0)[0].innerText,
       website: $siblings.eq(0)[0].href,
-      img: $siblings.eq(1)[0].currentSrc
+      // img: $siblings.eq(1)[0].currentSrc
+
+      brew_id: $siblings.eq(0)[0].id
       }
     console.log(data)
     $.ajax({
@@ -76,14 +80,14 @@ function showSaveBrews(){
       console.log(brewlist)
       brewlist.forEach(function(brew){
         console.log(brew.id)
-        var $a      = $('a').attr('href', brew.website)
+        // var $a      = $('a').attr('href', brew.website)
         var $img       = $('<img>').attr('src', brew.img)
         var $delete     =$('<button class="delete">').text("Delete Brewery")
         var $oneresult=$('<div>')
         var $div= $('<div>').text(brew.name +' '+brew.website).val(brew.id)
         console.log(brew.name, brew.website)
-        console.log($a)
-        $oneresult.append($div).append($delete).append($img).append($a)
+        // console.log($a)
+        $oneresult.append($div).append($delete).append($img)
 
         $('body').append($oneresult)
         $delete.click(deleteBrews)

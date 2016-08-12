@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160809190438) do
   create_table "brews", force: :cascade do |t|
     t.string "name"
     t.string "website"
+    t.string "img"
   end
 
   create_table "savebrews", force: :cascade do |t|
