@@ -13,7 +13,7 @@ function renderBrew( brew ) {
 
 // if image is found than get the large image of the brewery and append the image
     if (brew.images){
-    var $img       = $('<img id="img">').attr('src', brew.images.large)
+    var $img       = $('<img id="img">').attr('src', brew.images.medium)
       }
 
     $brewery.append( $name, $img, $descript, $save );

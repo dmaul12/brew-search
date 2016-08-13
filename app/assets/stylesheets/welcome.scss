@@ -2,7 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*Nav Bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: orange;
+}
+
+
 /*StayHere PlayHere Save Trip Styling*/
+#breweries{
+  // background-color: #00FFFF;
+    width: 400px;
+    height: 800px;
+    overflow: scroll;
+}
+.brew{
+  margin-top: 50px;
+}
 .one{
   color:red;
    overflow: none;
@@ -12,14 +47,8 @@
   margin: right;
 }
 #img{
-  margin-left: -4cm;
-}
-.brew{
-  overflow: none;
-  margin-top: 40px;
 
-
-  margin: auto;
+  float: center;
 }
 
 #center {
@@ -59,16 +88,6 @@
 }
 
 
-
-
-
-
-.signup{
-  font-size: 20px;
-  color: red;
-  font-weight: bolder;
-}
-
 body{
   padding-left: 70px;
   padding-right: 70px;
@@ -79,8 +98,8 @@ body{
 /*NavBar and Intro Area*/
 #head{
   background: linear-gradient(
-      rgba(55, 128, 8, 0.65),
-      rgba(67, 28, 93, 0.65)), url('http://pdxpedicab.com/home/wp-content/uploads/2013/09/Brewery.jpg') no-repeat center center fixed;
+      rgba(22, 11, 2, 0.65),
+      rgba(172, 89, 21, 0.65)), url('http://pdxpedicab.com/home/wp-content/uploads/2013/09/Brewery.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
