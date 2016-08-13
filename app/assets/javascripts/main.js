@@ -46,7 +46,6 @@ function getBrews(event) {
 function saveBrews(e){
   $('.save').on('click',function(e){
 
-
 // the name, website, description is in the parent and are children of each other
 // using jquery the .eq accesses the name = innerText and website = host. See console.log
 // ajax call to post the saved data

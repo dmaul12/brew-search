@@ -3,9 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /*Nav Bar*/
+a{
+  font-size: 30px;
+}
 ul {
     list-style-type: none;
     margin: 0;
+    // border: 1px solid white;
     padding: 0;
     overflow: hidden;
     background-color: #333;
@@ -27,16 +31,44 @@ li a:hover {
     background-color: orange;
 }
 
+/*NavBar and Intro Area*/
+#head{
+  background: linear-gradient(
+      rgba(22, 11, 2, 0.65),
+      rgba(172, 89, 21, 0.65)), url('http://pdxpedicab.com/home/wp-content/uploads/2013/09/Brewery.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 450px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:450px;
+  margin-top: -5px;
+  text-align: center;
+  color: white;
+}
+
+ #cap{
+  font-family: 'Trocchi', serif;
+  font-size: 90px;
+  text-align:center;
+}
 
 /*StayHere PlayHere Save Trip Styling*/
 #breweries{
   // background-color: #00FFFF;
-    width: 400px;
+    // width: 400px;
     height: 800px;
     overflow: scroll;
 }
 .brew{
   margin-top: 50px;
+  border: 3px solid #EFB485;
+  max-width: 560px;
+
+  padding: 15px;
 }
 .one{
   color:red;
@@ -60,14 +92,14 @@ li a:hover {
 .save{
   background-color: black;
   color: #fff;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trocchi', serif;
   text-transform: uppercase;
   border: none;
   border-radius: 1px;
 }
 
 .list-group h2, .savetrips h2{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trocchi', serif;
   font-size: 22px;
   font-weight: 700;
 }
@@ -95,53 +127,14 @@ body{
  }
 
 
-/*NavBar and Intro Area*/
-#head{
-  background: linear-gradient(
-      rgba(22, 11, 2, 0.65),
-      rgba(172, 89, 21, 0.65)), url('http://pdxpedicab.com/home/wp-content/uploads/2013/09/Brewery.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 450px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:450px;
-  margin-top: -20px;
-  text-align: center;
-  color: white;
-}
 
- #cap{
-  font-family: 'Oswald', sans-serif;
-  font-size: 90px;
-  text-align:center;
-}
-
-// .navbar{
-//   background-color: #431c5d;
-//   border-color: #cdd422;
-// }
-
-// .navbar-default .navbar-brand{
-//   color: #cdd422;
-//   font-size: 24px;
-//   font-family: 'Playfair Display', serif;
-//   font-style: italic;
-// }
-
-// .navbar-nav.navbar-right{
-//   margin: 15px 5px;
-//   color: white;
-// }
 
     /*SearchForm Styles*/
 
 
 .searchform.jumbotron{
-  background-color: #f2f2f2;
+
+  background-color: #5A534E;
   margin-top: 15px;
   padding-top: 05px;
   border-radius: 1px;
@@ -151,16 +144,16 @@ body{
   text-align: center;
   font-size: 24px;
   color: black;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Trocchi', serif;
   font-weight: 900;
   font-style: italic;
   padding-bottom: 10px;
 }
 
 .btn.btn-primary.btn-lg{
-  background-color: #b3b3b3;
-  color: green;
-  font-family: 'Oswald', sans-serif;
+  background-color: white;
+  color: #F77F07;
+  font-family: 'Trocchi', serif;
   text-transform: uppercase;
   border: none;
   border-radius: 5px;
@@ -170,11 +163,18 @@ input.form-control.input-lg{
 }
 
 #name {
-  width: 40%;
+  width: 30%;
 }
 
 #date {
-  width: 40%;
+  width: 30%;
+
 }
-
-
+.beer{
+  color:white;
+  text-align: center;
+}
+#byname{
+  color:white;
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
