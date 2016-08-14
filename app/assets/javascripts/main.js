@@ -88,14 +88,14 @@ function showSaveBrews(){
         // console.log($a)
         $oneresult.append($div).append($delete).append($img)
         $container.append($oneresult)
-        // $('body').append($oneresult)
+
         $delete.click(deleteBrews)
       })
   })
 
 }
 
-showSaveBrews()
+// showSaveBrews()
 
 function deleteBrews(){
   var $div= $(this).parent()
