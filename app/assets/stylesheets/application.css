@@ -20,8 +20,14 @@
   color:orange;
   font-weight: bolder;
   font-size: 30px;
+  font-family: 'Trocchi', serif;
+  text-shadow: 2px 2px black;
 
 }
 
+#body{
+  background-image: url("http://www.technocrazed.com/wp-content/uploads/2015/12/Brick-wallaper-For-Background-1.jpg");
 
+    background-image: url("http://etsy-preneurship.com/wp-content/uploads/2014/10/White-Brick-Background.jpg");
+}
 

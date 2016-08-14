@@ -13,6 +13,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    font-family: 'Trocchi', serif;
 }
 
 li {
@@ -31,11 +32,11 @@ li a:hover {
     background-color: orange;
 }
 
-/*NavBar and Intro Area*/
+/*Intro Area*/
 #head{
   background: linear-gradient(
       rgba(22, 11, 2, 0.65),
-      rgba(172, 89, 21, 0.65)), url('http://pdxpedicab.com/home/wp-content/uploads/2013/09/Brewery.jpg') no-repeat center center fixed;
+      rgba(194, 147, 86, 0.65)), url('http://pdxpedicab.com/home/wp-content/uploads/2013/09/Brewery.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -48,6 +49,7 @@ li a:hover {
   margin-top: -5px;
   text-align: center;
   color: white;
+  text-shadow: 2px 2px black;
 }
 
  #cap{
@@ -55,8 +57,12 @@ li a:hover {
   font-size: 90px;
   text-align:center;
 }
+#intro{
+  font-family: 'Trocchi', serif;
+  // text-shadow: 2px 2px orange;
+}
 
-/*StayHere PlayHere Save Trip Styling*/
+/*Save brews Styling*/
 #breweries{
   // background-color: #00FFFF;
     // width: 400px;
@@ -78,10 +84,6 @@ li a:hover {
 
   margin: right;
 }
-#img{
-
-  float: center;
-}
 
 .save{
   background-color: black;
@@ -90,6 +92,10 @@ li a:hover {
   text-transform: uppercase;
   border: none;
   border-radius: 1px;
+
+}
+.save:hover {
+  background-color: orange;
 }
 
 
@@ -131,6 +137,12 @@ body{
   border: none;
   border-radius: 5px;
 }
+
+.btn.btn-primary.btn-lg:hover{
+  background-color: orange;
+  color: white;
+}
+
 input.form-control.input-lg{
   border-radius: 1px;
 }
@@ -150,4 +162,23 @@ input.form-control.input-lg{
 #byname{
   color:white;
   text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+/*Footer Styling*/
+footer{
+  font-family: 'Trocchi', serif;
+  background-color: #333;
+  margin-top: 30px;
+  color: white;
+  padding-top: 15px;
+  text-align: center;
+}
+
+footer a{
+  color: #ffe0b3;
+  font-size: 18px;
+}
+
+span.glyphicon.glyphicon-heart{
+  color: orange;
 }

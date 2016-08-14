@@ -8,6 +8,7 @@
   padding: 20px 0 10px 0;
   font-size: 16px;
   width: 300px;
+  font-family: 'Trocchi', serif;
 }
 
 input[type=text],
@@ -23,10 +24,10 @@ input[type=password] {
 }
 
 .btn-submit {
-  color: #FFFFFF;
+  color: white;
   font-size: 18px;
   text-transform: uppercase;
-  background: #c91717;
+  background: orange;
   padding: 10px 20px;
   border: 0;
   margin-top: 6px;
