@@ -80,15 +80,15 @@ function showSaveBrews(){
       brewlist.forEach(function(brew){
         console.log(brew.id)
           var $name       = $('<a target="_blank" href="' + brew.website + '">')
-      $name.text( brew.name );
-        var $a      = $('a').attr('href', brew.website)
+      $name.text( brew.website);
+
         var $img       = $('<img>').attr('src', brew.img)
         var $delete     =$('<button class="delete">').text("Delete Brewery")
         var $oneresult=$('<div class = "one">')
-        var $div= $('<div>').text(brew.name +' '+brew.website).val(brew.id)
-        // var $div= $('<div>').attr($name).val(brew.id)
+        var $div= $('<div>').text(brew.name).val(brew.id).append($name)
+
         console.log(brew.name, brew.website)
-        // console.log($a)
+
         $oneresult.append($div).append($delete)
         $container.append($oneresult)
 

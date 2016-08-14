@@ -3,15 +3,25 @@ Welcome to Brew Search. The app that lets you search for breweries by name, esta
 
 ##User Stories
 * User
-    * User can search based on name, established date, location
-    * User can add breweries
-    * User can make a comment on a brewery
+    * User can search based on name, established date
+    * User can signup, login, logout
+    * User can save breweries 
 
-##API Used
-* [BreweryDB](http://www.brewerydb.com/developers)
+##Technologies Used
+
+* Ruby on Rails- MVC framework 
+* PSQL- store our data
+  
+####APIs Used 
+
+  * [BreweryDB](http://www.brewerydb.com/developers) 
 
 ##Wireframes
 ![alt text](images/home.png "Home Page")
 
 ERD:
 ![alt text](images/ERD.png "ERD")
+
+##Unsolved Issues
+
+

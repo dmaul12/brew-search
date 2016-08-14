@@ -1,7 +1,7 @@
 class SavebrewController < ApplicationController
    def index
-
-    render :json => Brew.all
+##only want to show the saved data from the unique user "session" matches users_id
+    render :json => Brew.where(users_id: session[:user_id])
   end
 
     def create
@@ -9,7 +9,8 @@ class SavebrewController < ApplicationController
     @brew = Brew.create({
 
                       :name => params[:name],
-                      :website => params[:website]
+                      :website => params[:website],
+                      :users_id => session[:user_id]
                     })
     render :json => @brew
     puts :name
