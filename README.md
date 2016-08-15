@@ -1,6 +1,9 @@
 # Introduction
 Welcome to Brew Search. The app that lets you search for breweries by name, established date, or location. Have you been to one of the breweries listed? If so add a comment! Would you like to save a list of breweries you'd like to visit? Add them to your list!
 
+# Website
+https://warm-plains-66444.herokuapp.com/
+
 ##User Stories
 * User
     * User can search based on name, established date
