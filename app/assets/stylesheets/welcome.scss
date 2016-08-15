@@ -17,7 +17,7 @@ ul {
 }
 
 li {
-    float: left;
+    float: right;
 }
 
 li a {
@@ -31,6 +31,8 @@ li a {
 li a:hover {
     background-color: orange;
 }
+
+
 
 /*Intro Area*/
 #head{
@@ -76,14 +78,7 @@ li a:hover {
 
   padding: 15px;
 }
-.one{
-  color:red;
-   overflow: none;
-  margin-top: 40px;
 
-
-  margin: right;
-}
 
 .save{
   background-color: black;
@@ -105,7 +100,14 @@ body{
 
  }
 
+#blank {
+    color:black;
+}
 
+#dblank {
+  color:#5A534E;
+  text-shadow: 2px 2px white;
+}
 
 
     /*SearchForm Styles*/
@@ -162,6 +164,21 @@ input.form-control.input-lg{
 #byname{
   color:white;
   text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+/*Delete saved brews Styling*/
+
+.one{
+  color:black;
+  overflow: none;
+  margin-top: 40px;
+  margin: right;
+  text-align:center;
+}
+.delete{
+  background-color: white;
+  color:orange;
+  font-family: 'Trocchi', serif;
 }
 
 /*Footer Styling*/

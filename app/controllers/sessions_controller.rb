@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def new
   end
-
+## user logs in creates a session and when logs out ends the session
   def create
     @user = User.find_by_email(params[:session][:email])
     if @user && @user.authenticate(params[:session][:password])

@@ -11,6 +11,7 @@ Welcome to Brew Search. The app that lets you search for breweries by name, esta
 
 * Ruby on Rails- MVC framework 
 * PSQL- store our data
+* Bcrypt- hash user's password
   
 ####APIs Used 
 
@@ -23,5 +24,14 @@ ERD:
 ![alt text](images/ERD.png "ERD")
 
 ##Unsolved Issues
+The saved breweries repopulates the whole list of breweries instead of just the one. 
+
+##References and Special Thanks
+* Rails authentication- codecademy tutorial on how to add user, signup, login, and logout. [Codecademy](https://www.codecademy.com/learn/rails-auth)
+
+* Special thanks to my classmates for support, especially James and Arlen with my saved breweries and functionality of my database.
+
+
+
 
 
