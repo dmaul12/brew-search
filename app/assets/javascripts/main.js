@@ -3,7 +3,7 @@
 function renderBrew( brew ) {
   // var $id        = $('<li>').text(brew.id)
   var $container  = $('#breweries');
-  var $brewery    = $('<div class="brew">').addClass('text-center');
+  var $brewery    = $('<div class="brew">').addClass('text-center').val(brew.id);
   var $save       = $('<button class="save">').text("Save Brewery");
 /// name of brewery will be a link to website
   var $name       = $('<a id="blank" target="blank" href="' + brew.website + '">')
@@ -47,18 +47,21 @@ function getBrews(event) {
 function saveBrews(e){
   $('.save').on('click',function(e){
 
+
 /// the name, website, description is in the parent and are children of each other
 /// using jquery the .eq accesses the name = innerText and website = host. See console.log
 /// ajax call to post the saved data
     let $siblings = $(event.target).parent().children();
+    let $parent  = $(event.target).parent()
     console.log($siblings)
+    // console.log($(event.target).parent())
     let data ={
 ///used href because some websites are facebook pages so host or hostname only would only lead to facebook.come
       name: $siblings.eq(0)[0].innerText,
       website: $siblings.eq(0)[0].href,
-      // img: $siblings.eq(1)[0].currentSrc
-
-      brew_id: $siblings.eq(0)[0].id
+      img: $siblings.eq(1)[0].currentSrc
+/// brew_id can use the id and write another function to get all the info of brewery but user already has info on left part of the screen.
+      // brew_id: $parent.eq(0).val()
       }
     console.log(data)
 ///success allows user to see what was saved once the save button is clicked
@@ -74,6 +77,7 @@ function saveBrews(e){
 /// shows the Name and website of the brewery that was saved
 function showSaveBrews(){
   var $container = $('#savedbrew')
+  $('#savedbrew').empty()
 
    $.ajax({
       url: '/savebrew',
@@ -85,13 +89,14 @@ function showSaveBrews(){
           var $name       = $('<a id="dblank" target="_blank" href="' + brew.website + '">')
       $name.text( brew.name);
 
-        // var $img       = $('<img>').attr('src', brew.img)
+        // var $img       = $('<img>').attr('src', brew.images.medium)
         var $delete     =$('<button class="delete">').text("Delete Brewery")
         var $oneresult=$('<div class = "one">')
         var $div= $('<div>').text(brew.name).val(brew.id).append($name)
 
 
-        console.log(brew.name, brew.website)
+        // console.log(brew.name, brew.website)
+        // console.log($img)
 
         $oneresult.append($div).append($delete)
         $container.append($oneresult)

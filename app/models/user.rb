@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   # has_many :brews
   has_many :names
   has_many :websites
-
+  has_many :imgs
 end
