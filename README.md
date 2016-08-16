@@ -26,8 +26,6 @@ https://warm-plains-66444.herokuapp.com/
 ERD:
 ![alt text](images/ERD.png "ERD")
 
-##Unsolved Issues
-The saved breweries repopulates the whole list of breweries instead of just the one. 
 
 ##References and Special Thanks
 * Rails authentication- codecademy tutorial on how to add user, signup, login, and logout. [Codecademy](https://www.codecademy.com/learn/rails-auth)
