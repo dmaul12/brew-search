@@ -26,6 +26,9 @@ https://warm-plains-66444.herokuapp.com/
 ERD:
 ![alt text](images/ERD.png "ERD")
 
+##Unresolved Issues:
+* Users add comments 
+
 
 ##References and Special Thanks
 * Rails authentication- codecademy tutorial on how to add user, signup, login, and logout. [Codecademy](https://www.codecademy.com/learn/rails-auth)
